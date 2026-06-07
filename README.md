@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Café Fausse — Full-Stack Web Application
 
 > An elegant fine-dining web application built with **React + Flask + PostgreSQL**.
@@ -1139,3 +1140,7 @@ Before going live, confirm each item:
 ---
 
 *Café Fausse — Founded 2010 · Washington, D.C.*
+=======
+# Cafe-fausse
+An elegant fine-dining web application built with **React + Flask + PostgreSQL**.
+>>>>>>> 619e00f9cddeb598afa64f14e205912bf675ab6d
