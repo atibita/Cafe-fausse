@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Café Fausse — Full-Stack Web Application
 
 > An elegant fine-dining web application built with **React + Flask + PostgreSQL**.
