@@ -1,0 +1,254 @@
+/* ── Menu Page ─────────────────────────────────────────────────── */
+
+/* Shared page hero (used by multiple pages) */
+.page-hero {
+  position: relative;
+  padding: var(--sp-3xl) 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-hero--menu {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(44, 10, 26, 0.92) 0%,
+      rgba(44, 10, 26, 0.85) 100%
+    ),
+    /* Warm geometric pattern */
+    repeating-conic-gradient(
+      rgba(201, 169, 110, 0.04) 0% 25%,
+      transparent 0% 50%
+    ) 0 0 / 20px 20px;
+  background-color: var(--clr-burgundy);
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 80% at 50% 50%,
+    rgba(74, 21, 40, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--clr-ivory);
+  margin-bottom: var(--sp-sm);
+}
+
+.page-hero__desc {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: rgba(253, 250, 245, 0.7);
+}
+
+/* ── Category Navigation ──────────────────────────────────────── */
+.menu-nav {
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 100;
+  background: var(--clr-ivory);
+  border-bottom: 1px solid var(--clr-gray-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  padding: var(--sp-md) 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.menu-nav__inner::-webkit-scrollbar { display: none; }
+
+.menu-nav__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-label);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-gray);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.menu-nav__btn:hover {
+  color: var(--clr-burgundy);
+  border-color: var(--clr-gray-light);
+}
+
+.menu-nav__btn--active {
+  color: var(--clr-burgundy);
+  background: var(--clr-cream-dark);
+  border-color: var(--clr-gold-light);
+}
+
+/* ── Dietary Legend ───────────────────────────────────────────── */
+.menu-legend {
+  display: flex;
+  gap: var(--sp-xl);
+  padding: var(--sp-md) 0;
+  font-size: var(--fs-xs);
+  color: var(--clr-gray);
+  font-family: var(--font-label);
+  letter-spacing: 0.08em;
+}
+
+.menu-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.menu-legend__badge {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  background: var(--clr-gold);
+  color: var(--clr-burgundy);
+  padding: 2px 6px;
+  border-radius: 99px;
+  font-weight: 500;
+}
+
+/* ── Menu Body ────────────────────────────────────────────────── */
+.menu-body {
+  padding-block: var(--sp-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3xl);
+}
+
+/* ── Menu Section ─────────────────────────────────────────────── */
+.menu-section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  margin-bottom: var(--sp-sm);
+}
+
+.menu-section__icon {
+  font-size: var(--fs-xl);
+}
+
+.menu-section__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  color: var(--clr-burgundy);
+}
+
+/* ── Menu Items ───────────────────────────────────────────────── */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-lg) var(--sp-2xl);
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-lg);
+  padding: var(--sp-lg) 0;
+  border-bottom: 1px solid var(--clr-gray-light);
+  transition: background var(--transition-fast);
+}
+
+.menu-item__info { flex: 1; }
+
+.menu-item__name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-xs);
+}
+
+.menu-item__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--clr-burgundy);
+}
+
+.menu-item__badge {
+  font-family: var(--font-label);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  background: var(--clr-gold);
+  color: var(--clr-burgundy);
+  padding: 2px 7px;
+  border-radius: 99px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.menu-item__desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-charcoal-soft);
+  line-height: 1.7;
+}
+
+.menu-item__price {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--clr-gold);
+  font-weight: 600;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+/* ── Menu CTA ─────────────────────────────────────────────────── */
+.menu-cta {
+  background: var(--clr-cream-dark);
+  padding: var(--sp-3xl) var(--sp-xl);
+}
+
+.menu-cta__inner {
+  text-align: center;
+}
+
+.menu-cta__heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  color: var(--clr-burgundy);
+  margin-bottom: var(--sp-sm);
+}
+
+.menu-cta__sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--clr-charcoal-soft);
+  margin-bottom: var(--sp-xl);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+  .menu-nav__inner { justify-content: flex-start; }
+}

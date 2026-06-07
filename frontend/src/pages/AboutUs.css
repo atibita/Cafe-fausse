@@ -1,0 +1,281 @@
+/* ── About Us Page ─────────────────────────────────────────────── */
+
+.page-hero--about {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(44, 10, 26, 0.93) 0%,
+      rgba(44, 10, 26, 0.87) 100%
+    ),
+    repeating-linear-gradient(
+      30deg,
+      rgba(201, 169, 110, 0.035) 0px,
+      rgba(201, 169, 110, 0.035) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  background-color: var(--clr-burgundy);
+}
+
+/* ── Story + Timeline ─────────────────────────────────────────── */
+.about-story__inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--sp-3xl);
+  align-items: start;
+}
+
+.about-story__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+}
+
+.about-story__text p {
+  font-size: var(--fs-base);
+  line-height: 1.95;
+  color: var(--clr-charcoal-soft);
+}
+
+/* Timeline */
+.about-story__timeline {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--sp-xl));
+  background: var(--clr-ivory);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-gray-light);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-story__timeline-title {
+  font-family: var(--font-label);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--sp-xl);
+}
+
+.timeline {
+  position: relative;
+  padding-left: var(--sp-xl);
+}
+
+/* Vertical rule */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--clr-gold), transparent);
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 52px 12px 1fr;
+  gap: var(--sp-sm);
+  align-items: flex-start;
+  margin-bottom: var(--sp-lg);
+  position: relative;
+}
+
+.timeline__year {
+  font-family: var(--font-label);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--clr-gold);
+  text-align: right;
+  padding-top: 2px;
+}
+
+.timeline__dot {
+  width: 10px;
+  height: 10px;
+  background: var(--clr-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+  box-shadow: 0 0 0 3px var(--clr-cream);
+}
+
+.timeline__event {
+  font-size: var(--fs-sm);
+  color: var(--clr-charcoal-soft);
+  line-height: 1.6;
+}
+
+/* ── Founders (FR-11) ─────────────────────────────────────────── */
+.founders { background: var(--clr-cream-dark); }
+
+.founders__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-2xl);
+}
+
+.founder-card {
+  background: var(--clr-ivory);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-gray-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Monogram avatar */
+.founder-card__avatar {
+  background: var(--clr-burgundy);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-card__avatar::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 50%;
+}
+
+.founder-card__initials {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-style: italic;
+  color: var(--clr-gold);
+  position: relative;
+  z-index: 1;
+}
+
+.founder-card__body {
+  padding: var(--sp-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.founder-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--clr-burgundy);
+}
+
+.founder-card__role {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+.founder-card__bio {
+  font-size: var(--fs-sm);
+  line-height: 1.9;
+  color: var(--clr-charcoal-soft);
+  flex: 1;
+}
+
+.founder-card__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-base);
+  color: var(--clr-burgundy-light);
+  line-height: 1.6;
+  border-left: 3px solid var(--clr-gold);
+  padding-left: var(--sp-md);
+  margin-top: var(--sp-md);
+  quotes: none;
+}
+
+/* ── Values ───────────────────────────────────────────────────── */
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-xl);
+}
+
+.value-card {
+  text-align: center;
+  padding: var(--sp-xl) var(--sp-lg);
+  background: var(--clr-ivory);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-gray-light);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-card__icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: var(--sp-md);
+}
+
+.value-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--clr-burgundy);
+  margin-bottom: var(--sp-sm);
+}
+
+.value-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-charcoal-soft);
+  line-height: 1.8;
+}
+
+/* ── CTA ──────────────────────────────────────────────────────── */
+.about-cta {
+  background: var(--clr-burgundy);
+  padding: var(--sp-3xl) var(--sp-xl);
+}
+
+.about-cta__inner { text-align: center; }
+
+.about-cta__heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  color: var(--clr-ivory);
+  margin-bottom: var(--sp-md);
+}
+
+.about-cta__sub {
+  font-style: italic;
+  color: rgba(253, 250, 245, 0.65);
+  margin-bottom: var(--sp-xl);
+}
+
+.about-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-md);
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .values__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .about-story__inner { grid-template-columns: 1fr; }
+  .about-story__timeline { position: static; }
+  .founders__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .values__grid { grid-template-columns: 1fr; }
+  .about-cta__actions { flex-direction: column; align-items: center; }
+}
